@@ -1,6 +1,8 @@
+import '/flutter_flow/ff_builtin_enums.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
+import '/index.dart';
 import 'package:flutter/services.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:flutter/material.dart';
@@ -170,6 +172,7 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                           focusNode: _model.emailFocusNode1,
                                           autofocus: false,
                                           enabled: true,
+                                          textInputAction: TextInputAction.next,
                                           obscureText: false,
                                           decoration: InputDecoration(
                                             isDense: true,
@@ -293,6 +296,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                                         .bodyMedium
                                                         .fontStyle,
                                               ),
+                                          keyboardType:
+                                              (FFKeyboardType.emailAddress)
+                                                  .flutterValue,
                                           cursorColor:
                                               FlutterFlowTheme.of(context)
                                                   .primaryText,
@@ -461,8 +467,9 @@ class _HomePageWidgetState extends State<HomePageWidget>
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 16.0, 0.0, 0.0),
                                           child: FFButtonWidget(
-                                            onPressed: () {
-                                              print('Button pressed ...');
+                                            onPressed: () async {
+                                              context.pushNamed(
+                                                  CadastroPageWidget.routeName);
                                             },
                                             text: 'Entrar',
                                             options: FFButtonOptions(
@@ -862,6 +869,11 @@ class _HomePageWidgetState extends State<HomePageWidget>
                   ),
                 ],
               ),
+            ),
+            Form(
+              key: _model.formKey,
+              autovalidateMode: AutovalidateMode.disabled,
+              child: Container(),
             ),
           ],
         ),

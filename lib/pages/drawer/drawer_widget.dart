@@ -5,29 +5,29 @@ import '/flutter_flow/flutter_flow_widgets.dart';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'cadastro_page_model.dart';
-export 'cadastro_page_model.dart';
+import 'drawer_model.dart';
+export 'drawer_model.dart';
 
 /// Página para cadastro de clientes
-class CadastroPageWidget extends StatefulWidget {
-  const CadastroPageWidget({super.key});
+class DrawerWidget extends StatefulWidget {
+  const DrawerWidget({super.key});
 
-  static String routeName = 'CadastroPage';
-  static String routePath = '/cadastroPage';
+  static String routeName = 'Drawer';
+  static String routePath = '/drawer';
 
   @override
-  State<CadastroPageWidget> createState() => _CadastroPageWidgetState();
+  State<DrawerWidget> createState() => _DrawerWidgetState();
 }
 
-class _CadastroPageWidgetState extends State<CadastroPageWidget> {
-  late CadastroPageModel _model;
+class _DrawerWidgetState extends State<DrawerWidget> {
+  late DrawerModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => CadastroPageModel());
+    _model = createModel(context, () => DrawerModel());
   }
 
   @override

@@ -66,9 +66,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => HomePageWidget(),
         ),
         FFRoute(
-          name: CadastroPageWidget.routeName,
-          path: CadastroPageWidget.routePath,
-          builder: (context, params) => CadastroPageWidget(),
+          name: DrawerWidget.routeName,
+          path: DrawerWidget.routePath,
+          builder: (context, params) => DrawerWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
